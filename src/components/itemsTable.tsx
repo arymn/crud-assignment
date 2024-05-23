@@ -105,7 +105,7 @@ const ItemsTable: FC = () => {
       <div className="flex gap-2">
         <button
           className="btn btn-circle  btn-outline"
-          onClick={() => setPage((old) => Math.max(old - 1, 0))}
+          onClick={() => setPage((old) => Math.max(old - 1, 1))}
           disabled={page === 1}
         >
           <svg
@@ -126,11 +126,11 @@ const ItemsTable: FC = () => {
         <button
           className="btn  btn-circle btn-outline"
           onClick={() => {
-            if (!isPlaceholderData && data?.data?.next) {
+            if (!isPlaceholderData && data?.next) {
               setPage((old) => old + 1);
             }
           }}
-          disabled={isPlaceholderData || !data?.data?.next}
+          disabled={isPlaceholderData || !data?.next}
         >
           <svg
             width="15"
