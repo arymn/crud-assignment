@@ -1307,6 +1307,13 @@
       "url": "https://via.placeholder.com/600/10e0b8",
       "albumId": 8,
       "thumbnailUrl": "https://via.placeholder.com/150/10e0b8"
+    },
+    {
+      "id": "579e",
+      "albumId": "12",
+      "title": "Pop",
+      "url": "http://localhost:3000/pictures?_page=0&_per_page=6",
+      "thumbnailUrl": "http://localhost:3000/pictures?_page=0&_per_page=6"
     }
   ],
   "albums": [
@@ -1317,17 +1324,17 @@
     },
     {
       "userId": "1",
-      "id": 2,
+      "id": "2",
       "title": "Work"
     },
     {
       "userId": "1",
-      "id": 3,
+      "id": "3",
       "title": "Camera"
     },
     {
       "userId": "1",
-      "id": 4,
+      "id": "4",
       "title": "Landscape"
     },
     {
