@@ -1,44 +1,48 @@
 "use client"
 
-import React, { FC } from "react";
-import { CreateItemSchema } from "@/schemas/schema";
+import React, { FC, useEffect } from "react";
+import { UpdateItemSchema, CreateItemSchema } from "@/schemas/schema";
 import { z } from "zod";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { addItem } from "@/app/actions";
+import { addItem, updateItem } from "@/app/actions";
 
-interface CreateItemDrawerProps {
+interface UpdateItemDrawerProps {
   children: React.ReactNode;
+  itemData: z.infer<typeof CreateItemSchema> & {
+    id: number
+  }
 }
 
-type CreateItemSchemaType = z.infer<typeof CreateItemSchema>;
+type UpdateItemSchemaType = z.infer<typeof UpdateItemSchema>;
 
-const CreateItemDrawer: FC<CreateItemDrawerProps> = ({ children }) => {
+const UpdateItemDrawer: FC<UpdateItemDrawerProps> = ({ children, itemData }) => {
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm<CreateItemSchemaType>({
-    resolver: zodResolver(CreateItemSchema)
+  } = useForm<UpdateItemSchemaType>({
+      defaultValues: itemData,
+    resolver: zodResolver(UpdateItemSchema)
   })
 
-  const onSubmit: SubmitHandler<CreateItemSchemaType> = async (data) => {
+  const onSubmit: SubmitHandler<UpdateItemSchemaType> = async (data) => {
     console.log(data);
-    await addItem(data)
+    await updateItem(itemData.id, data )
   };
 
   return (
-    <div className="drawer z-30  ">
-      <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
+    <div className="drawer z-20">
+      <input id={`my-drawer-${itemData.id}`} type="checkbox" className="drawer-toggle" />
       <div className="drawer-content">
-        <label htmlFor="my-drawer-4" className="drawer-button ">
+        <label htmlFor={`my-drawer-${itemData.id}`} className="drawer-button ">
           <div>{children}</div>
         </label>
       </div>
       <div className="drawer-side">
         <label
-          htmlFor="my-drawer-4"
+          htmlFor={`my-drawer-${itemData.id}`}
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
@@ -115,7 +119,7 @@ const CreateItemDrawer: FC<CreateItemDrawerProps> = ({ children }) => {
             </div>
 
             <button type="submit" className="btn btn-accent w-full">
-              Create Item
+              Update Item
             </button>
           </form>
         </div>
@@ -124,4 +128,4 @@ const CreateItemDrawer: FC<CreateItemDrawerProps> = ({ children }) => {
   );
 };
 
-export default CreateItemDrawer;
+export default UpdateItemDrawer;

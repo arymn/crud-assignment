@@ -1270,38 +1270,70 @@
     {
       "albumId": 4,
       "id": "182",
-      "title": "non aut facilis nihil aliquid sequi quae aut soluta",
+      "title": "Dummy title",
       "url": "https://via.placeholder.com/600/10e0b8",
       "thumbnailUrl": "https://via.placeholder.com/150/10e0b8"
     },
     {
-      "id": "7e53",
-      "albumId": "2",
-      "title": "The title",
-      "url": "https://images.unsplash.com/photo-1716221335037-13dc765ac8d0?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "thumbnailUrl": "https://images.unsplash.com/photo-1716221335037-13dc765ac8d0?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "id": "d6cf",
+      "title": "Dummy title",
+      "url": "https://via.placeholder.com/600/10e0b8",
+      "albumId": 4,
+      "thumbnailUrl": "https://via.placeholder.com/150/10e0b8"
+    },
+    {
+      "id": "cbd5",
+      "title": "Dummy title",
+      "url": "https://via.placeholder.com/600/10e0b8",
+      "albumId": 4,
+      "thumbnailUrl": "https://via.placeholder.com/150/10e0b8"
+    },
+    {
+      "id": "2030",
+      "title": "Dummy title",
+      "url": "https://via.placeholder.com/600/10e0b8",
+      "albumId": 4,
+      "thumbnailUrl": "https://via.placeholder.com/150/10e0b8"
+    },
+    {
+      "id": "065e",
+      "title": "Dummy title",
+      "url": "https://via.placeholder.com/600/10e0b8",
+      "albumId": 8,
+      "thumbnailUrl": "https://via.placeholder.com/150/10e0b8"
+    },
+    {
+      "id": "b670",
+      "url": "https://via.placeholder.com/600/10e0b8",
+      "albumId": 8,
+      "thumbnailUrl": "https://via.placeholder.com/150/10e0b8"
     }
   ],
   "albums": [
     {
       "userId": 1,
       "id": "1",
-      "title": "quidem molestiae enim"
+      "title": "Holidays"
     },
     {
-      "userId": 1,
-      "id": "2",
-      "title": "sunt qui excepturi placeat culpa"
+      "userId": "1",
+      "id": 2,
+      "title": "Work"
     },
     {
-      "userId": 1,
-      "id": "3",
-      "title": "omnis laborum odio"
+      "userId": "1",
+      "id": 3,
+      "title": "Camera"
     },
     {
+      "userId": "1",
+      "id": 4,
+      "title": "Landscape"
+    },
+    {
+      "id": "4a69",
       "userId": 1,
-      "id": "4",
-      "title": "non esse culpa molestiae omnis sed optio"
+      "title": "Others"
     }
   ],
   "profile": {
